@@ -1,0 +1,7 @@
+frontal_homepage:
+    path:     /
+    defaults: { _controller: FrontalBundle:Default:index }
+
+primera_ruta:
+    path:     /mipagina
+    defaults: { _controller: FrontalBundle:Default:mipaginainicial }    
