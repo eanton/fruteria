@@ -4,4 +4,9 @@ frontal_homepage:
 
 primera_ruta:
     path:     /mipagina
-    defaults: { _controller: FrontalBundle:Default:mipaginainicial }    
+    defaults: { _controller: FrontalBundle:Default:mipaginainicial }  
+    
+otra_ruta:
+    path:     /otra
+    defaults: { _controller: FrontalBundle:Default:otranuevapagina }      
+
