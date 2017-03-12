@@ -6,20 +6,22 @@
 			<div id="main-container-image">
                        
 					<section class="work">
-
+						{% for fruta in frutas%}
 						<figure class="white">
 							<a href="details.html">
 								<img src="{{ asset('bundles/frontal/img/psd-4.jpg') }}" alt="" />
 								<dl>
-									<dt>Wordpress theme</dt>
-									<dd>Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.</dd>	
+									<dt>{{ fruta.nombre }}</dt>
+									<dd>{{ fruta.descripcion}}</dd>	
+									<dd>{{ fruta.gramos}} gr</dd>
 								</dl>
 							</a>
                             <div id="wrapper-part-info">
                             	<div class="part-info-image"><img src="{{ asset('bundles/frontal/img/icon-psd.svg')}}" alt="" width="28" height="28"/></div>
-                            	<div id="part-info">Wordpress theme</div>
+                            	<div id="part-info">{{ fruta.nombre }}</div>
 							</div>
                         </figure>	
+						{% endfor %}
 
 						<figure class="white">
 							<a href="#">

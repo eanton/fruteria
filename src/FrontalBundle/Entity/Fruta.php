@@ -1,0 +1,124 @@
+<?php
+
+namespace FrontalBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/** @ORM\Entity */
+class Fruta
+{
+	/**
+	* @ORM\Id
+	* @ORM\Column(type="integer")
+	* @ORM\GeneratedValue(strategy="AUTO")
+	*/
+	private $id;
+	
+	/**
+	* @ORM\Column(type="string", length=50)
+	*/
+	private $nombre;
+	
+	/**
+	* @ORM\Column(type="string", length=255)
+	*/
+	private $descripcion;
+	
+	/**
+	* @ORM\Column(type="datetime")
+	*/
+	private $fechaEntrega;
+	
+	/**
+	* @ORM\Column(type="boolean")
+	*/
+	private $ecologica;
+	
+	/**
+	* @ORM\Column(type="integer")
+	*/
+	private $gramos;
+	
+	/**
+	* @ORM\Column(type="integer")
+	*/
+	private $precio;
+	
+	public function getId()
+	{
+		return $this->id;
+	}
+	
+	public function setNombre($nombre)
+	{
+		$this->nombre = $nombre;
+	}
+	
+	public function getNombre()
+	{
+		return $this->nombre;
+	}
+	
+	public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+    }
+
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    public function setFechaEntrega($fechaEntrega)
+    {
+        $this->fechaEntrega = $fechaEntrega;
+    }
+
+    public function getFechaEntrega()
+    {
+        return $this->fechaEntrega;
+    }
+
+    public function setEcologica($ecologica)
+    {
+        $this->ecologica = $ecologica;
+    }
+
+    public function getEcologica()
+    {
+        return $this->ecologica;
+    }
+
+    public function setGramos($gramos)
+    {
+        $this->gramos = $gramos;
+    }
+
+    public function getGramos()
+    {
+        return $this->gramos;
+    }
+	
+    /**
+     * Set precio
+     *
+     * @param integer $precio
+     * @return Fruta
+     */
+    public function setPrecio($precio)
+    {
+        $this->precio = $precio;
+
+        return $this;
+    }
+
+    /**
+     * Get precio
+     *
+     * @return integer 
+     */
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+}
